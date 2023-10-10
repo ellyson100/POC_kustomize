@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poc-api
+  namespace: poc-api
+spec:
+  selector:
+    app: poc-api
+  ports:
+  - port: 80
+    targetPort: 80

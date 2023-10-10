@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-api
+  namespace: poc-api
+spec:
+  selector:
+    matchLabels:
+      app: poc-api
+  template:
+    metadata:
+      labels:
+        app: poc-api
+    spec:
+      containers:
+      - name: poc-api
+        image: ellyson100/poc-api:2
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

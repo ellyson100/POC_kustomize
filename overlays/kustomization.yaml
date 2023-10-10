@@ -11,4 +11,4 @@ kind: Kustomization
 images:
 - name: ellyson100/poc-api
   newName: ellyson100/poc-api
-  newTag: "16"
+  newTag: "17"
